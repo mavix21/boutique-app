@@ -1,0 +1,38 @@
+<div class="pt-24">
+  <!--  <p-galleria-->
+  <!--    [value]="carouselImages"-->
+  <!--    [numVisible]="2"-->
+  <!--    [showItemNavigators]="true"-->
+  <!--    [circular]="true"-->
+  <!--    [autoPlay]="true"-->
+  <!--  >-->
+  <!--    <ng-template let-item pTemplate="item">-->
+  <!--      <img [src]="item.itemImageSrc" [alt]="item.alt">-->
+  <!--    </ng-template>-->
+  <!--  </p-galleria>-->
+  <div class="flex flex-wrap">
+    <p-carousel
+      [value]="carouselImages"
+      [numVisible]="1"
+      [numScroll]="1"
+      [circular]="true"
+      [autoplayInterval]="5000"
+      indicatorStyleClass="rounded-full"
+      class="basis-0 flex-grow-[999] min-w-[65%]"
+    >
+      <ng-template let-item pTemplate="item">
+        <div class="rounded-lg overflow-hidden">
+          <img [src]="item.itemImageSrc" [alt]="item.alt">
+        </div>
+      </ng-template>
+    </p-carousel>
+    <p-card class="basis-96 flex-grow-[1]">
+      <div class="flex justify-between items-center">
+        <h2 class="text-xl font-bold">Destacados</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+      </div>
+    </p-card>
+  </div>
+</div>
